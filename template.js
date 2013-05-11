@@ -12,7 +12,7 @@ exports.description = 'Create a Rendr project, including unit tests.';
 
 // Template-specific notes to be displayed after question prompts.
 exports.after = 'You should now install project dependencies with _npm ' +
-  'install_. After that, start your Rendr application with _grunt server_/ ' +
+  'install_. After that, start your Rendr application with _grunt server_. ' +
   'Check out the Rendr documentation:' +
   '\n\n' +
   'https://github.com/airbnb/rendr';
