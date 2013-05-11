@@ -10,7 +10,3 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 _(Nothing yet)_
-
-## License
-Copyright (c) {%= grunt.template.today('yyyy') %} {%= author_name %}  
-Licensed under the {%= licenses.join(', ') %} license{%= licenses.length === 1 ? '' : 's' %}.
