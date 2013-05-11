@@ -28,10 +28,6 @@ exports.template = function(grunt, init, done) {
     init.prompt('name'),
     init.prompt('description'),
     init.prompt('version'),
-    init.prompt('repository'),
-    init.prompt('homepage'),
-    init.prompt('bugs'),
-    init.prompt('licenses'),
     init.prompt('author_name'),
     init.prompt('author_email'),
     init.prompt('author_url'),
@@ -71,9 +67,6 @@ exports.template = function(grunt, init, done) {
 
     // Files to copy (and process).
     var files = init.filesToCopy(props);
-
-    // Add properly-named license files.
-    init.addLicenseFiles(files, props.licenses);
 
     // Actually copy (and process) files.
     init.copyAndProcess(files, props);
