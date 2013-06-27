@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 
     bgShell: {
       runNode: {
-        cmd: './node_modules/nodemon/nodemon.js index.js',
+        cmd: 'node ./node_modules/nodemon/nodemon.js index.js',
         bg: true
       }
     },
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
             return filename.replace('app/templates/', '').replace('.hbs', '');
           }
         },
-        src: "app/templates/*.hbs",
+        src: "app/templates/**/*.hbs",
         dest: "app/templates/compiledTemplates.js",
         filter: function(filepath) {
           var filename = path.basename(filepath);
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
         }
       },
       stylesheets: {
-        files: stylesheetsDir + '/**/*.styl',
+        files: [stylesheetsDir + '/**/*.styl', stylesheetsDir + '/**/*.css'],
         tasks: ['stylus'],
         options: {
           interrupt: true
@@ -82,8 +82,7 @@ module.exports = function(grunt) {
             underscore: '../rendr/node_modules/underscore/underscore.js',
             backbone: '../rendr/node_modules/backbone/backbone.js',
             handlebars: '../rendr/node_modules/handlebars/dist/handlebars.runtime.js',
-            async: '../rendr/node_modules/async/lib/async.js',
-            'inherit-component': '../rendr/node_modules/inherit-component/index.js'
+            async: '../rendr/node_modules/async/lib/async.js'
           },
           aliases: [
             {from: rendrDir + '/client', to: 'rendr/client'},
