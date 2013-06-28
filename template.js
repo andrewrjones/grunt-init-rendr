@@ -50,13 +50,14 @@ exports.template = function(grunt, init, done) {
       "underscore": "~1.4.4",
       "async": "~0.1.22",
       "request": "~2.16",
-      "rendr": "~0.4.4-rc.3",
+      "rendr": "~0.4.7-rc.3",
       "debug": "*"
     };
     props.devDependencies = {
+      "grunt": "~0.4.1",
       "grunt-contrib-jshint": "~0.1.1",
       "grunt-contrib-stylus": "~0.5.0",
-      "grunt-contrib-handlebars": "git://github.com/spikebrehm/grunt-contrib-handlebars#d61e7457c6551965f88de46ad207fd67d18ddd4a",
+      "grunt-contrib-handlebars": "git://github.com/spikebrehm/grunt-contrib-handlebars#0395c6fa9c765616af34cafad377572196068cf8",
       "grunt-rendr-stitch": "~0.0.6",
       "grunt-contrib-watch": "~0.3.1",
       "grunt-bg-shell": "~2.0.1",
